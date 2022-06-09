@@ -9,9 +9,9 @@ function App() {
       <nav className="App-header">
 
           <h1> Top-Rating </h1>
-          {/* <Link to={'/'}> */}
+          <Link to={'/'}>
             <h1> Genres </h1>
-          {/* </Link> */}
+          </Link>
 
       </nav>
         <main>
