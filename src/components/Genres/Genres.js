@@ -1,7 +1,12 @@
 import './Genres.css'
 export default function Genres() {
 
-    return(
-        <h2>Hello World</h2>
+    return (
+        <div>
+            <h2>Hello World</h2>
+
+        </div>
+
+
     )
 }

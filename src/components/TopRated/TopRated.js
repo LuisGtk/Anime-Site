@@ -1,7 +1,12 @@
 import './TopRated.css'
 export default function TopRated() {
 
-    return(
-        <h2>Hello World</h2>
+    return (
+        <div>
+            <h2>Hello World</h2>
+
+        </div>
+
+
     )
 }

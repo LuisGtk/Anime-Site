@@ -2,25 +2,24 @@
   text-align: center;
 }
 body, html{
-  background-color: #5d6d91;
+  background-color: #868b96;
 }
 .App-header {
-  background-color: #5d6d91;
+  background-color: #000000;
   min-height: 15vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
-  color: rgb(30, 15, 15);
 }
 
 li {
   display: flex;
   align-items: space-around;
   float: right;
-  border-right: 1px solid black;
 }
 a {
 text-decoration: none;
+color: rgb(189, 138, 27);
 }

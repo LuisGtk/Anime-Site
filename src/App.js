@@ -9,22 +9,20 @@ function App() {
     <div className="App">
       <nav className="App-header">
 
-      <Link to={'/Top-Rated'}>
-            <h1> Top-Rated </h1>
-          </Link>
-          <Link to={'/Genres'}>
-            <h1> Genres </h1>
-          </Link>
+        <Link to={'/TopRated'}>
+          <h1> Top-Rated </h1>
+        </Link>
+        <Link to={'/Genres'}>
+          <h1> Genres </h1>
+        </Link>
 
       </nav>
-        <main>
+      <main>
         <Routes>
-        <Route path='/TopRated' element={<TopRated />} />
-      </Routes>
-      <Routes>
-        <Route path='/Genres' element={<Genres />} />
-      </Routes>
-    </main>
+          <Route path='/TopRated' element={<TopRated />} />
+          <Route path='/Genres' element={<Genres />} />
+        </Routes>
+      </main>
     </div >
   );
 }
