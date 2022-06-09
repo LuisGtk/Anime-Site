@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import Genres from './components/Genres/Genres';
+import TopRated from './components/TopRated/TopRated';
 
 
 function App() {
@@ -17,9 +18,12 @@ function App() {
 
       </nav>
         <main>
-      {/* <Routes>
+        <Routes>
+        <Route path='/TopRated' element={<TopRated />} />
+      </Routes>
+      <Routes>
         <Route path='/Genres' element={<Genres />} />
-      </Routes> */}
+      </Routes>
     </main>
     </div >
   );
