@@ -3,12 +3,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height:15vh;
+  background-color: #636c81;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+li {
+  display: flex;
+  align-items: space-around;
+  float: right;
+  border-right: 1px solid black;
 }
