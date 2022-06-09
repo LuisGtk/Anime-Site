@@ -8,8 +8,10 @@ function App() {
     <div className="App">
       <nav className="App-header">
 
-          <h1> Top-Rating </h1>
-          <Link to={'/'}>
+      <Link to={'/Top-Rated'}>
+            <h1> Top-Rated </h1>
+          </Link>
+          <Link to={'/Genres'}>
             <h1> Genres </h1>
           </Link>
 

@@ -21,3 +21,6 @@ li {
   float: right;
   border-right: 1px solid black;
 }
+a {
+text-decoration: none;
+}
