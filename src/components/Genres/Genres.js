@@ -1,4 +1,5 @@
 import './Genres.css'
+import { useState } from 'react';
 export default function Genres() {
 
     return (
@@ -10,3 +11,4 @@ export default function Genres() {
 
     )
 }
+
