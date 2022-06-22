@@ -16,13 +16,14 @@ export default function TopRated() {
             try {
                 // fetch data from link
                 const res = await fetch(apiURL);
-               // converting json response into a variable
+                // converting json response into a variable
                 const data = await res.json();
-                // console.log(data)
+                console.log(data)
                 // dotting into array of anime inside the onbject
                 const objectData = Object.values(data)[0];
+                // adding object values  into objectData variable
                 setAnime(objectData);
-                console.log(anime);
+                console.log(objectData);
             } catch (err) {
                 console.error(err)
             }
@@ -30,6 +31,9 @@ export default function TopRated() {
         getData();
     }, [])
 
+return(
+    anime.map((item) => item.id)
+)
 
 
 
@@ -46,27 +50,26 @@ export default function TopRated() {
 
 
 
+    //logs data
+    // function fetchAnime() {
+    //     fetch(apiURL)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data.data[0].attributes);
+    //         });
+    // }
 
-        //logs data
-        // function fetchAnime() {
-        //     fetch(apiURL)
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             console.log(data.data[0].attributes);
-        //         });
-        // }
+    // one way of console logging data
 
-        // one way of console logging data
-
-        // function fetchAnime() {
-        //     fetch(apiURL)
-        //         .then(res => {
-        //             return res.json();
-        //         })
-        //         .then(data => {
-        //             console.log(data.data)
-        //             console.log(data.data[0].attributes.canonicalTitle )
-        //         })
-        // }
-        // fetchAnime()
+    // function fetchAnime() {
+    //     fetch(apiURL)
+    //         .then(res => {
+    //             return res.json();
+    //         })
+    //         .then(data => {
+    //             console.log(data.data)
+    //             console.log(data.data[0].attributes.canonicalTitle )
+    //         })
+    // }
+    // fetchAnime()
 }
