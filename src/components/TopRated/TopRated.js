@@ -1,13 +1,10 @@
 
 import './TopRated.css';
-import { useState, useEffect } from 'react';
-///////////////////////////////////////////////////////////////////////////
+import { useState, useEffect, Link } from 'react';
 
 export default function TopRated() {
-    const [anime, setAnime] = useState([])
+    const [anime, setAnime] = useState([]);
 
-    // console.log(apiURL);
-    //////////////////////////////////////////////////////////////////////////////////
 
     useEffect(() => {
         //async function and useEffect to convert original api to proper json format // proper array
@@ -30,46 +27,33 @@ export default function TopRated() {
         };
         getData();
     }, [])
-
-return(
-    anime.map((item) => item.id)
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //logs data
-    // function fetchAnime() {
-    //     fetch(apiURL)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data.data[0].attributes);
-    //         });
-    // }
-
-    // one way of console logging data
-
-    // function fetchAnime() {
-    //     fetch(apiURL)
-    //         .then(res => {
-    //             return res.json();
-    //         })
-    //         .then(data => {
-    //             console.log(data.data)
-    //             console.log(data.data[0].attributes.canonicalTitle )
-    //         })
-    // }
-    // fetchAnime()
+    return photos.length > 0 ? (
+        <section className="container">
+            {photos.length &&
+                photos.map((photo) => {
+                    return (
+                        <Link to={`/details/${photo.date}`} key={photo.date}>
+                            <div className="card">
+                                <div className="card-image">
+                                    {photo.media_type === "image" ? (
+                                        <img src={photo.url} alt={photo.title} />
+                                    ) : (
+                                        <img
+                                            src="https://apod.nasa.gov/apod/image/1210/Helix_BiColour_Finalpugh1022c.jpg"
+                                            alt="This is the Helix Nebula"
+                                        />
+                                    )}
+                                </div>
+                                <div className="card-title">
+                                    <h3>{photo.title}</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </Link>
+                    );
+                })}
+        </section>
+    ) : (
+        <h1>loading...</h1>
+    );
 }
