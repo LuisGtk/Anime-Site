@@ -1,6 +1,7 @@
 
 import './TopRated.css';
-import { useState, useEffect, Link } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TopRated() {
     const [anime, setAnime] = useState([]);
@@ -27,25 +28,26 @@ export default function TopRated() {
         };
         getData();
     }, [])
-    return photos.length > 0 ? (
+    return anime.length > 0 ? (
         <section className="container">
-            {photos.length &&
-                photos.map((photo) => {
+            {anime.length &&
+                anime.map((anime) => {
                     return (
-                        <Link to={`/details/${photo.date}`} key={photo.date}>
+                        
+                        <Link to={`/details/${anime.date}`} key={anime.date}>
                             <div className="card">
                                 <div className="card-image">
-                                    {photo.media_type === "image" ? (
-                                        <img src={photo.url} alt={photo.title} />
+                                    {/* {anime.media_type === "image" ? (
+                                        <img src={anime.url} alt={anime.title} />
                                     ) : (
                                         <img
                                             src="https://apod.nasa.gov/apod/image/1210/Helix_BiColour_Finalpugh1022c.jpg"
                                             alt="This is the Helix Nebula"
                                         />
-                                    )}
+                                    )} */}
                                 </div>
                                 <div className="card-title">
-                                    <h3>{photo.title}</h3>
+                                    <h3>{anime.attributes.canonicalTitle}</h3>
                                     <p></p>
                                 </div>
                             </div>

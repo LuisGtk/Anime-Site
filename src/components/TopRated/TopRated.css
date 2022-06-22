@@ -1,6 +1,7 @@
 h2 {
   text-align: center;
 }
+
 button {
   min-width: 150px;
   margin-bottom: 30px;
@@ -12,4 +13,8 @@ button {
   border: none;
   color: rgb(15, 66, 54);
   transition: all 0.5s;
+}
+
+a {
+  color: black;
 }
