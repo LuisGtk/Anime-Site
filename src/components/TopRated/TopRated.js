@@ -28,27 +28,24 @@ export default function TopRated() {
         };
         getData();
     }, [])
+    // beggining of return statement
     return anime.length > 0 ? (
         <section className="container">
             {anime.length &&
                 anime.map((anime) => {
                     return (
-                        
                         <Link to={`/details/${anime.date}`} key={anime.date}>
                             <div className="card">
-                                <div className="card-image">
-                                    {/* {anime.media_type === "image" ? (
-                                        <img src={anime.url} alt={anime.title} />
-                                    ) : (
-                                        <img
-                                            src="https://apod.nasa.gov/apod/image/1210/Helix_BiColour_Finalpugh1022c.jpg"
-                                            alt="This is the Helix Nebula"
-                                        />
-                                    )} */}
-                                </div>
+                                {/* <div className="card-image"> */}
+                                    {/* {anime.attributes.posterImage.original} */}
+                                {/* </div> */}
                                 <div className="card-title">
-                                    <h3>{anime.attributes.canonicalTitle}</h3>
-                                    <p></p>
+                                    <ol>
+                                        <li>{anime.attributes.canonicalTitle}</li>
+                                        <li>{anime.attributes.averageRating}</li>
+                                        <li>{anime.attributes.description}</li>
+                                        <li>{anime.attributes.startDate}</li>
+                                    </ol>
                                 </div>
                             </div>
                         </Link>
