@@ -27,3 +27,14 @@ color: rgb(255, 174, 0);
 .card-title{
   display: flex;
 }
+.favs{
+display: flex;
+flex-direction: column;
+}
+li{
+  align-self: center;
+  font-size: 25px;
+}
+.title{
+  font-size: 50px;
+}

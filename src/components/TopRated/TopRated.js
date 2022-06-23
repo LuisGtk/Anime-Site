@@ -29,26 +29,27 @@ export default function TopRated() {
         getData();
     }, [])
     // beggining of return statement
+    //map the first argument of
     return anime.length > 0 ? (
         <section className="container">
             {anime.length &&
                 anime.map((anime) => {
                     return (
-                        <Link to={`/details/${anime.date}`} key={anime.date}>
+                        // <Link to={`/details/${anime.date}`} key={anime.date}>
                             <div className="card">
                                 {/* <div className="card-image"> */}
-                                    {/* {anime.attributes.posterImage.original} */}
+                                    {/* {anime.attributes.thumbnail.original} */}
                                 {/* </div> */}
                                 <div className="card-title">
-                                    <ol>
-                                        <li>{anime.attributes.canonicalTitle}</li>
+                                    <ol className='favs'>
+                                        <li className='title'>{anime.attributes.canonicalTitle}</li>
                                         <li>{anime.attributes.averageRating}</li>
                                         <li>{anime.attributes.description}</li>
                                         <li>{anime.attributes.startDate}</li>
                                     </ol>
                                 </div>
                             </div>
-                        </Link>
+                        // </Link>
                     );
                 })}
         </section>
