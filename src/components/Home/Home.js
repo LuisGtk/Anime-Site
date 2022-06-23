@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Search from '../Search/Search';
+
 export default function Home() {
 
     const [list, setList] = useState([]);
@@ -26,9 +28,6 @@ export default function Home() {
     //     getData();
     // }, [])
     return (
-        <form className='charSearch'>
-            <input type="text" placeholder="Ex: Goku" name="search"></input>
-            <button type='submit'>Submit</button>
-        </form>
+<Search />
     )
 }

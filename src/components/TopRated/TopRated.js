@@ -43,9 +43,9 @@ export default function TopRated() {
                                 <div className="card-title">
                                     <ol className='favs'>
                                         <li className='title'>{anime.attributes.canonicalTitle}</li>
-                                        <li>{anime.attributes.averageRating}</li>
-                                        <li>{anime.attributes.description}</li>
-                                        <li>{anime.attributes.startDate}</li>
+                                        <li>Date of release: {anime.attributes.startDate}</li>
+                                        <li>Ratings:{anime.attributes.averageRating}</li>
+                                        <li>Show Description:  {anime.attributes.description}</li>
                                     </ol>
                                 </div>
                             </div>
