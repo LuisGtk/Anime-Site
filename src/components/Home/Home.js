@@ -3,6 +3,7 @@ import Search from '../Search/Search';
 
 export default function Home() {
 
+
     const [list, setList] = useState([]);
     // increasing amount of results for the api
     const searchParameters = `?page%5Blimit%5D=20&page%5Boffset%5D=0`;
@@ -27,7 +28,36 @@ export default function Home() {
         };
         getData();
     }, [])
-    return (
-<Search />
-    )
+
+    return list.length > 0 ? (
+        <section className="container">
+            {list.length &&
+                list.map((list) => {
+                    return (
+                        // <Link to={`/details/${anime.date}`} key={anime.date}>
+                        <div className="card">
+                            {/* <div className="card-image"> */}
+                            {/* {anime.attributes.thumbnail.original} */}
+                            {/* </div> */}
+                            <div className="card-title">
+                                <ol className='favs'>
+                                    <li className='title'>{list.attributes.canonicalTitle}</li>
+                                    <img
+                                        className='animeImg'
+                                        src={list.attributes.posterImage.original}
+                                        alt={list.attributes.canonicalTitle}
+                                    />
+                                    <li>Date of release: {list.attributes.startDate}</li>
+                                    <li>Ratings:{list.attributes.averageRating}</li>
+                                    <p>{list.attributes.description}</p>
+                                </ol>
+                            </div>
+                        </div>
+                        // </Link>
+                    );
+                })}
+        </section>
+    ) : (
+        <h1>loading...</h1>
+    );
 }
