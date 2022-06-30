@@ -21,9 +21,9 @@ export default function TopRated() {
                 const objectData = Object.values(data)[0];
                 // adding object values  into objectData variable
                 setAnime(objectData);
-                console.log(objectData);
+                // console.log(objectData);
             } catch (err) {
-                console.error(err)
+                // console.error(err)
             }
         };
         getData();
