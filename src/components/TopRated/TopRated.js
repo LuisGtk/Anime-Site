@@ -16,7 +16,7 @@ export default function TopRated() {
                 const res = await fetch(apiURL);
                 // converting json response into a variable
                 const data = await res.json();
-                console.log(data)
+                // console.log(data)
                 // dotting into array of anime inside the onbject
                 const objectData = Object.values(data)[0];
                 // adding object values  into objectData variable
@@ -36,19 +36,24 @@ export default function TopRated() {
                 anime.map((anime) => {
                     return (
                         // <Link to={`/details/${anime.date}`} key={anime.date}>
-                            <div className="card">
-                                {/* <div className="card-image"> */}
-                                    {/* {anime.attributes.thumbnail.original} */}
-                                {/* </div> */}
-                                <div className="card-title">
-                                    <ol className='favs'>
-                                        <li className='title'>{anime.attributes.canonicalTitle}</li>
-                                        <li>Date of release: {anime.attributes.startDate}</li>
-                                        <li>Ratings:{anime.attributes.averageRating}</li>
-                                        <li>Show Description:  {anime.attributes.description}</li>
-                                    </ol>
-                                </div>
+                        <div className="card">
+                            {/* <div className="card-image"> */}
+                            {/* {anime.attributes.thumbnail.original} */}
+                            {/* </div> */}
+                            <div className="card-title">
+                                <ol className='favs'>
+                                    <li className='title'>{anime.attributes.canonicalTitle}</li>
+                                    <img
+                                        className='animeImg'
+                                        src={anime.attributes.posterImage.original}
+                                        alt={anime.attributes.canonicalTitle}
+                                    />
+                                    <li>Date of release: {anime.attributes.startDate}</li>
+                                    <li>Ratings:{anime.attributes.averageRating}</li>
+                                    <p>{anime.attributes.description}</p>
+                                </ol>
                             </div>
+                        </div>
                         // </Link>
                     );
                 })}

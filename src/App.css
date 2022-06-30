@@ -24,12 +24,10 @@ text-decoration: none;
 color: rgb(255, 174, 0);
 }
 
-.card-title{
-  display: flex;
-}
 .favs{
 display: flex;
 flex-direction: column;
+border-bottom-style: solid;
 }
 li{
   align-self: center;
@@ -37,4 +35,15 @@ li{
 }
 .title{
   font-size: 50px;
+  padding-top:4%;
 }
+.animeImg{
+  align-self: center;
+  width: 400px;
+  height: 500px;
+  padding: 50px;
+  }
+  p{
+    font-size:15px;
+    font-weight: 500;
+  }
