@@ -1,7 +1,7 @@
 
 import './TopRated.css';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function TopRated() {
     const [anime, setAnime] = useState([]);
@@ -35,11 +35,11 @@ export default function TopRated() {
             {anime.length &&
                 anime.map((anime) => {
                     return (
-                        // <Link to={`/details/${anime.date}`} key={anime.date}>
-                        <div className="card">
-                            {/* <div className="card-image"> */}
-                            {/* {anime.attributes.thumbnail.original} */}
-                            {/* </div> */}
+                        <a 
+                        href={`${anime.anime_url}`} 
+                        key={anime.date}
+                        >
+                        <div className="card"> 
                             <div className="card-title">
                                 <ol className='favs'>
                                     <li className='title'>{anime.attributes.canonicalTitle}</li>
@@ -54,7 +54,7 @@ export default function TopRated() {
                                 </ol>
                             </div>
                         </div>
-                        // </Link>
+                        </a>
                     );
                 })}
         </section>

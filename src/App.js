@@ -1,9 +1,9 @@
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Genres from './components/Genres/Genres';
+// import Genres from './components/Genres/Genres';
 import TopRated from './components/TopRated/TopRated';
 import Home from './components/Home/Home';
-
+import Search from './components/Search/Search'
 function App() {
   
   return (
@@ -15,15 +15,16 @@ function App() {
         <Link to={'/TopRated'}>
           <h1> Top-Rated </h1>
         </Link>
-        <Link to={'/Genres'}>
+        {/* <Link to={'/Genres'}>
           <h1> Genres </h1>
-        </Link>
+        </Link> */}
       </nav>
+<Search />
       <main>
         <Routes>
         <Route path='/' element={<Home />} />
           <Route path='/TopRated' element={<TopRated />} />
-          <Route path='/Genres' element={<Genres />} />
+          {/* <Route path='/Genres' element={<Genres />} /> */}
         </Routes>
       </main>
     </div >
