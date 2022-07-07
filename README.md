@@ -1,3 +1,6 @@
+An anime site that shows you a list of anime and the hight-rated anime that are currently out. I built this using react. I had issues displaying object data from this API since its objects were nested into another array. It was definently one of the harder problemsI had to solve but after trying many different fetch methods, I finally dotted into the array. Unfortunently, the search bar is not working and I would like to add another component and/or pageination using react. I will add to this the moment I can.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
